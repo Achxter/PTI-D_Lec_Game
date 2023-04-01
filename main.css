@@ -1,31 +1,93 @@
-body{
-    background-image: url('./Source/hamish-weir-aYEUXnVG8tg-unsplash.jpg');
-    /* background-size: cover; */
+/* body{
+    background-image: url("./Source/Pagi.jpg");
     background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.4);
-    /* background-blend-mode: lighten; */
-}
+    background-color: rgba(0, 0, 0, 0.2);
+    background-size: 400%;
+    background-position: center;
+    background-blend-mode: darken;
+} */
 
 @media (max-width: 768px){
-    #buttons{
+    /* #buttons{
         position: absolute;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+    } */
+    #char{
+        height: 40vh;
     }
+
+    img#logo{
+        width: 150px;
+    }
+    
+    img.logo{
+        width: 80px;
+    }
+}
+
+@media (min-width: 769px){
+    img#logo{
+        width: 80px;
+    }
+    
+    img.logo{
+        width: 45px;
+    }
+
     #char{
         height: 30vh;
     }
 }
-
-img#logo{
-    width: 100px;
+#level{
+    color: white;
 }
 
-img.logo{
-    width: 50px;
+/* #char{
+    height: 35vh;
+} */
+
+button {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid transparent;
+    border-radius: .75rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    padding: .75rem 1.2rem;
+    text-align: center;
+    text-decoration: none #6B7280 solid;
+    text-decoration-thickness: auto;
+    transition-duration: .2s;
+    transition-property: background-color,border-color,color,fill,stroke;
+    transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 10vh;
+    height: 5vh;
 }
 
-button.button{
-    width: 100px;
+button:hover {
+    background-color: black;
+}
+
+button:focus {
+    box-shadow: none;
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+    button {
+        padding: .75rem 1.5rem;
+        width: 15vh;
+        height: 8vh;
+    }
 }
