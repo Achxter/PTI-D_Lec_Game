@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UMNGotcha | MidExam</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
     <style>
-        @media (max-width: 768px){
-            body{
+        @media (max-width: 768px) {
+            body {
                 background-image: url("./Source/Pagi.jpg");
                 background-repeat: no-repeat;
                 background-color: rgba(0, 0, 0, 0.2);
@@ -18,16 +20,18 @@
                 background-blend-mode: darken;
             }
         }
-        body{
-                background-image: url("./Source/Pagi.jpg");
-                background-repeat: no-repeat;
-                background-color: rgba(0, 0, 0, 0.2);
-                /* background-size: 400%; */
-                background-position: center;
-                background-blend-mode: darken;
-            }
+
+        body {
+            background-image: url("./Source/Pagi.jpg");
+            background-repeat: no-repeat;
+            background-color: rgba(0, 0, 0, 0.2);
+            /* background-size: 400%; */
+            background-position: center;
+            background-blend-mode: darken;
+        }
     </style>
 </head>
+
 <body>
     <div class="bg-image"></div>
     <div class="container">
@@ -37,53 +41,93 @@
             <hr class="border-2 opacity-100 mb-md-0 mb-2" style="color: white;">
         </div>
         <div id="stats" class="row justify-content-center">
-                <div class="col-6 w-25 d-flex flex-column align-items-end">
-                    <div class="d-flex justify-content-center">
-                        <img src="./Source/cutlery.png" class="img-fluid logo me-2" alt="">
-                        <progress value="32" max="100" class="m-auto"></progress>
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <img src="./Source/joystick.png" class="img-fluid logo me-2" alt="">
-                        <progress value="32" max="100" class="m-auto"></progress>
-                    </div>
+            <div class="col-6 w-25 d-flex flex-column align-items-end">
+                <div class="d-flex justify-content-center">
+                    <img src="./Source/cutlery.png" class="img-fluid logo me-2" alt="">
+                    <progress value="32" max="100" id="food" class="m-auto"></progress>
                 </div>
-                <div class="col-6 w-25 d-flex flex-column  align-items-start">
-                    <div class="d-flex justify-content-center">
-                        <img src="./Source/sleeping.png" class="img-fluid logo me-2" alt="">
-                        <progress value="32" max="100" class="m-auto"></progress>
-                    </div>
-                    <div class="d-flex justify-content-center">
-                        <img src="./Source/cardiogram.png" class="img-fluid logo me-2" alt="">
-                        <progress value="32" max="100" class="m-auto"></progress>
-                    </div>
+                <div class="d-flex justify-content-center">
+                    <img src="./Source/joystick.png" class="img-fluid logo me-2" alt="">
+                    <progress value="32" max="100" id="play" class="m-auto"></progress>
                 </div>
-            <h5 id="level" class="text-center">Level 1</h4>
+            </div>
+            <div class="col-6 w-25 d-flex flex-column  align-items-start">
+                <div class="d-flex justify-content-center">
+                    <img src="./Source/sleeping.png" class="img-fluid logo me-2" alt="">
+                    <progress value="32" max="100" id="sleep" class="m-auto"></progress>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <img src="./Source/cardiogram.png" class="img-fluid logo me-2" alt="">
+                    <progress value="32" max="100" id="health" class="m-auto"></progress>
+                </div>
+            </div>
+            <h4 id="level" class="text-center">Level 1</h4>
+        </div>
+        <div class="m-0">
+            <h4 class="text-center" style="color: white;">Good Morning, player!</h4>
+            <h4 class="text-center mb-0" style="color: white;">00.00</h4>
         </div>
         <div class="d-flex m-auto justify-content-center mt-md-1 mt-0">
             <div id="char" class="d-flex">
                 <img src="./Source/on-my-way-snoopy.gif" alt="">
             </div>
         </div>
-        <br>
         <div id="buttons" class="mb-3">
             <div class="row mt-4">
                 <div class="col d-flex justify-content-end">
-                    <button>Eat</button>
+                    <button id="btneat">Eat</button>
                 </div>
                 <div class="col d-flex">
-                    <button>Sleep</button>           
+                    <button id="btnsleep">Sleep</button>
                 </div>
             </div>
             <div class="row mt-4">
                 <div class="col  d-flex justify-content-end">
-                    <button>Play</button>                
+                    <button id="btnplay">Play</button>
                 </div>
                 <div class="col">
-                    <button>Heal</button>    
+                    <button id="btnheal">Heal</button>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <script>
+        const eatBtn = document.querySelector('#btneat');
+        const sleepBtn = document.querySelector('#btnsleep');
+        const playBtn = document.querySelector('#btnplay');
+        const healBtn = document.querySelector('#btnheal');
+        const eatProgress = document.querySelector('#food');
+        const sleepProgress = document.querySelector('#sleep');
+        const playProgress = document.querySelector('#play');
+        const healProgress = document.querySelector('#health');
+
+        eatBtn.addEventListener('click', function () {
+            eatProgress.value += 30;
+            sleepProgress.value -= 10;
+        });
+
+        sleepBtn.addEventListener('click', function () {
+            sleepProgress.value += 80;
+            eatProgress.value -= 20;
+            healProgress.value += 30;
+        });
+
+        playBtn.addEventListener('click', function () {
+            playProgress.value += 30;
+            healProgress.value -= 20;
+            eatProgress.value -= 15;
+            sleepProgress.value -=15;
+        });
+
+        healBtn.addEventListener('click', function () {
+            healProgress.value += 70;
+            sleepProgress.value -= 10;
+        });
+
+    </script>
 </body>
+
 </html>
