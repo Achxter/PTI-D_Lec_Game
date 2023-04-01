@@ -1,9 +1,21 @@
 body{
     background-image: url('./Source/hamish-weir-aYEUXnVG8tg-unsplash.jpg');
-    background-size: cover;
+    /* background-size: cover; */
     background-repeat: no-repeat;
     background-color: rgba(255, 255, 255, 0.4);
-    background-blend-mode: lighten;
+    /* background-blend-mode: lighten; */
+}
+
+@media (max-width: 768px){
+    #buttons{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #char{
+        height: 30vh;
+    }
 }
 
 img#logo{
@@ -12,4 +24,8 @@ img#logo{
 
 img.logo{
     width: 50px;
+}
+
+button.button{
+    width: 100px;
 }
