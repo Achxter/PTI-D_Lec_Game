@@ -134,7 +134,7 @@ function updateTimer() {
         localStorage.setItem("curr-Eat", currEat);
         localStorage.setItem("curr-Sleep", currSleep);
         localStorage.setItem("curr-Play", currPlay);
-        window.location = 'main.html';
+        window.location.href = './main.html';
     } else {
         timer--;
     }
