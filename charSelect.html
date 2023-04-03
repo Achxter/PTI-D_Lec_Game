@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>UMNGotcha | MidExam</title>
+		<link rel="stylesheet" href="charSelect.css" />
+	</head>
+	<body>
+		
+		
+		<div class="line">
+			<div class="line-1">
+				<div class="wave wave1" style="background-image: url(Source/1.png)"></div>
+			</div>
+			<div class="line-2">
+				<div class="wave wave2" style="background-image: url(Source/2.png)"></div>
+			</div>
+			<div class="line-3">
+				<div class="wave wave3" style="background-image: url(Source/3.png)"></div>
+			</div>	
+		</div>
+		
+		<div class="card">
+			<div class="circleC"></div>
+			<div class="content" >
+				<h2>Poodle Dog</h2>
+				<p>
+					He is a good dog; besides being good, he is loyal and
+					happy to play. Look, Poodle is waiting for you to play.
+					Let's play with Poodle!
+
+				</p>
+				<a href="#" onclick="saveNameAndRedirect1()">Use Now</a>
+			</div>
+			<img id="char1" src="Source/dog1-idle.gif" />
+		</div>
+		<br />
+		
+		<div class="card">
+			
+			<div class="isi">
+				<h1>Choose Your Character</h1>
+				<h1>Choose Your Character</h1>
+			</div>
+			
+			<div class="circleC"></div>
+			<div class="content" >
+				<h2>Charlie Cat</h2>
+				<p>
+					Charlie is a very agile and brilliant cat. The fur
+					clean to the point that her pretty eyes attract people
+					to be able to play with it. Let's play with Charlie!
+				</p>
+				<a href="#" onclick="saveNameAndRedirect2()">Use Now</a>
+			</div>
+			<img id="char2" src="Source/cat1-idle.gif" />
+		</div>
+		<div class="back">
+			<a href="isiNama.html">
+				<button><b>Back</b></button>
+			</a>
+		</div>
+		<script text="javascript">
+			function saveNameAndRedirect1() {
+				const charImg = document.getElementById("char1").getAttribute('src');
+				localStorage.setItem("charImg", charImg);
+				window.location.href = "main.html";
+			}
+			function saveNameAndRedirect2() {
+				const charImg = document.getElementById("char2").getAttribute('src');
+				localStorage.setItem("charImg", charImg);
+				window.location.href = "main.html";
+			}
+		</script>
+	</body>
+</html>
