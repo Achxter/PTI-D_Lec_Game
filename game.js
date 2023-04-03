@@ -120,21 +120,7 @@ function updateTimer() {
     if (timer === 0) {
         clearInterval(timerInterval);
         alert('Game over!');
-        
-        let eat = localStorage.getItem("statEat");
-        let sleep = localStorage.getItem("statSleep");
-        let play = localStorage.getItem("statPlay");
-        
-        eat -= 40;
-        sleep -= 40;
-        // play = parseInt(currPlay);
-        play = play + scoreNow;
-    
-
-        localStorage.setItem("curr-Eat", currEat);
-        localStorage.setItem("curr-Sleep", currSleep);
-        localStorage.setItem("curr-Play", currPlay);
-        window.location.href = './main.html';
+        finishGame();
     } else {
         timer--;
     }
@@ -142,3 +128,19 @@ function updateTimer() {
   
 let timerInterval = setInterval(updateTimer, 1000);
   
+function finishGame() {
+    let eat = localStorage.getItem("statEat");
+    let sleep = localStorage.getItem("statSleep");
+    let play = localStorage.getItem("statPlay");
+    
+    eat -= 40;
+    sleep -= 40;
+    // play = parseInt(currPlay);
+    play = play + score;
+
+
+    localStorage.setItem("statEat", eat);
+    localStorage.setItem("statSleep", sleep);
+    localStorage.setItem("statPlay", play);
+    window.location.href = './main.html';
+}

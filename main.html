@@ -64,8 +64,8 @@
             <h4 id="level" class="text-center">Level 1</h4>
         </div>
         <div class="m-0">
-            <h4 class="text-center" style="color: white;">Good Morning, player!</h4>
-            <h4 class="text-center mb-0" style="color: white;">00.00</h4>
+            <h4 class="text-center" style="color: white;"></h4>
+            <p class="text-center m-auto d-flex" style="color: white;" id="time"></p>
         </div>
         <div class="d-flex m-auto justify-content-center mt-md-1 mt-0">
             <div id="char" class="d-flex">
@@ -82,7 +82,7 @@
                 </div>
             </div>
             <div class="row mt-4">
-                <div class="col  d-flex justify-content-end">
+                <div class="col d-flex justify-content-end">
                     <button id="btnplay">Play</button>
                 </div>
                 <div class="col">
@@ -95,38 +95,7 @@
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
         crossorigin="anonymous"></script>
     <script>
-        const eatBtn = document.querySelector('#btneat');
-        const sleepBtn = document.querySelector('#btnsleep');
-        const playBtn = document.querySelector('#btnplay');
-        const healBtn = document.querySelector('#btnheal');
-        const eatProgress = document.querySelector('#food');
-        const sleepProgress = document.querySelector('#sleep');
-        const playProgress = document.querySelector('#play');
-        const healProgress = document.querySelector('#health');
-
-        eatBtn.addEventListener('click', function () {
-            eatProgress.value += 30;
-            sleepProgress.value -= 10;
-        });
-
-        sleepBtn.addEventListener('click', function () {
-            sleepProgress.value += 80;
-            eatProgress.value -= 20;
-            healProgress.value += 30;
-        });
-
-        playBtn.addEventListener('click', function () {
-            playProgress.value += 30;
-            healProgress.value -= 20;
-            eatProgress.value -= 15;
-            sleepProgress.value -=15;
-        });
-
-        healBtn.addEventListener('click', function () {
-            healProgress.value += 70;
-            sleepProgress.value -= 10;
-        });
-
+        
     </script>
 </body>
 
